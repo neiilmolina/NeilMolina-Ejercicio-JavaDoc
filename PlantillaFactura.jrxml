@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.1.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PlantillaFactura" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45e1b1d3-b024-4680-a5be-8dbd242fa653">
+	<parameter name="tipoDeEntrada" class="java.lang.String"/>
+	<parameter name="precio" class="java.lang.Double"/>
+	<parameter name="cantidad" class="java.lang.Integer"/>
+	<parameter name="precioTotal" class="java.lang.Double"/>
+	<parameter name="fechaString" class="java.lang.String"/>
+	<parameter name="horaString" class="java.lang.String"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="rutaImagen" class="java.net.URL"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="-10" y="0" width="570" height="31" backcolor="#2B7475" uuid="1781bd17-732a-41e2-83b0-c58e8d6b26e4"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="326" y="0" width="192" height="30" forecolor="#FFFFFF" uuid="44d301bf-7850-440c-a29f-bbb61e2fec3e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial Black"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fechaString}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="518" y="0" width="42" height="30" forecolor="#FFFFFF" uuid="d9e251b9-7f37-458c-b7de-1a637b1faa28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial Black"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaString}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="312" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="-10" y="-5" width="570" height="281" backcolor="#3AC9B9" uuid="707d9961-7216-43d9-ac98-a76ca970177d"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="180" y="14" width="201" height="31" uuid="8bae9f2d-1e03-4c3b-a292-1e593a172892">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Arial Black" size="18"/>
+				</textElement>
+				<text><![CDATA[FACTURA ENTRADA]]></text>
+			</staticText>
+			<rectangle radius="3">
+				<reportElement x="140" y="50" width="270" height="250" uuid="3a5d0b0e-5d02-4776-ad21-165891d0e194"/>
+				<graphicElement>
+					<pen lineColor="#EDE8E8"/>
+				</graphicElement>
+			</rectangle>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="163" y="70" width="227" height="200" uuid="62c43961-ee0f-4ca7-b13c-8eb335b25619"/>
+				<imageExpression><![CDATA[$P{rutaImagen}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="188" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<rectangle radius="3">
+				<reportElement positionType="FixRelativeToBottom" x="1" y="1" width="208" height="100" backcolor="rgba(47, 47, 47, 0.0)" uuid="e27add17-fd6a-4da1-a269-aea9e8eddbac"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="rgba(199, 197, 197, 0.5921569)"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="60" y="11" width="102" height="20" forecolor="#3AC9B9" uuid="d527a64c-1d30-4423-98ef-4c9eca893dd7"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial Black"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tipoDeEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="31" width="35" height="19" forecolor="#383838" uuid="e6d7bfa8-c5fe-4b23-b22c-760e6681af05">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="50" width="70" height="21" forecolor="#383838" uuid="9b430e1f-bb30-4a7d-a318-5c77e5ad822a"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="71" width="35" height="20" forecolor="#383838" uuid="d44570a9-1578-401d-a612-d44c5cf7a76a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{precioTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="31" width="40" height="19" uuid="13e90138-696c-4480-9e2f-2494cd88a640"/>
+				<text><![CDATA[Precio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="50" width="50" height="21" uuid="3ef6aeca-9f1d-4018-85fc-74f9de131c45"/>
+				<text><![CDATA[Cantidad:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="71" width="60" height="20" uuid="18219fd0-ca94-47fe-82c2-776a5e5934f9"/>
+				<text><![CDATA[Precio Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="31" width="14" height="19" forecolor="#383838" uuid="91534cca-7239-40b7-b818-b0186bbae5d6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[€]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="71" width="14" height="20" forecolor="#383838" uuid="f7c69940-ec6e-4b6b-ae9f-3ebd8f7c0805"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[€]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="396" y="12" width="123" height="19" uuid="bac99ba2-84b4-4895-800e-0a26e492f69a"/>
+				<textElement>
+					<font fontName="Arial Black" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="31" width="104" height="19" uuid="52b5cf4f-303c-4364-ae7c-a31aacc0fe6e"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="396" y="31" width="40" height="19" uuid="2c8b5107-4a14-419e-92de-17262bdcd590"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Correo:]]></text>
+			</staticText>
+			<rectangle radius="3">
+				<reportElement x="343" y="0" width="211" height="101" forecolor="rgba(0, 0, 0, 0.0)" backcolor="rgba(47, 47, 47, 0.16078432)" uuid="3aecfb4c-e2ea-4724-aaf4-600a04be8386"/>
+			</rectangle>
+			<rectangle radius="5">
+				<reportElement x="-8" y="138" width="570" height="50" backcolor="#304445" uuid="8ee82527-66c7-4a4c-9e78-05a1aab316e5"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="225" y="141" width="101" height="16" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="101b4415-891d-4dd2-b2d8-0033f0746a43"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Arial Black" size="10"/>
+				</textElement>
+				<text><![CDATA[UBICACIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="162" width="292" height="16" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="78d54b86-c024-4ab9-9744-7b68a133670d"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[C. de Bernardino Obregón, 25, Arganzuela, 28012 Madrid]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
